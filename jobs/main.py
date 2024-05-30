@@ -15,6 +15,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# KAFKA_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://0.0.0.0:9092 
+# KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
+
 KAFKA_BOOSTRAP_SERVERS = os.getenv('KAFKA_BOOSTRAP_SERVERS', 'localhost:9092')
 VEHICLE_TOPIC = os.getenv('VEHICLE_TOPIC', 'vehicle_data')
 WEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')
